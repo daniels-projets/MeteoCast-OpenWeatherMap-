@@ -36,8 +36,8 @@ Matériel utilisé: Esp32 DevKit et Tft Touch de 3,5' ILI9488
                        
 Schéma de connection de l'afficheur
 
+![Esp32 ILI9488_Touch copie](https://user-images.githubusercontent.com/126287326/231236152-1e4a359f-b6f9-4e60-970b-76f13b8d5a03.jpg)
 
-        ![Esp32 ILI9488_Touch copie](https://user-images.githubusercontent.com/126287326/231207295-2e273f8f-a0e4-4262-9a3c-f055efa3b1c4.jpg)
-
+        
         
 
