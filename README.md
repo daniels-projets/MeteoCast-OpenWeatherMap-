@@ -59,7 +59,13 @@ Matériel utilisé: Esp32 DevKit et Tft Touch de 3,5' ILI9488
                        
                        No Ota 2Mo applis et 2Mo SPIFFS 
                        
-                       
+ 
+En cas d'alerte météo, indication par icone sur touche météo courante
+
+Et indication de la nature et durée sur un écran affiché de façon temporaire 
+ 
+ 
+ 
 Schéma de connection de l'afficheur  
 
 
