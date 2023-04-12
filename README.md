@@ -74,6 +74,13 @@ Schéma de connection de l'afficheur
         
 Copie d'écran pour organisation du programme avec les différents sous-programmes
 
+
+
+<img width="1226" alt="Capture d’écran 2023-04-12 à 11 21 37" src="https://user-images.githubusercontent.com/126287326/231416092-5caaf179-db45-4d78-9014-d179c523344d.png">
+
+
+
+
 Et la structure des fichier dans le dossier
 
 Il y a aussi le fichier User_Setup pour TFT_eSPI
