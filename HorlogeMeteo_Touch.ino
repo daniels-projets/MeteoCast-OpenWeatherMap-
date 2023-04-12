@@ -1,4 +1,10 @@
 
+//        Esp32  ILI9488_Touch  MeteoCast
+//        V01-M00  2023/04/12
+
+//        Source de reference
+//        https://github.com/JHershey69/OpenWeatherOneCall
+
 
 #include "FS.h"
 #include "SPIFFS.h"  // For ESP32 only
@@ -20,8 +26,8 @@
 #include <WiFi.h>
 #include <WiFiMulti.h>
 #include <WiFiUdp.h>
-    const char *ssid     = "Bbox-Lux";
-    const char *password = "2427242711";
+    const char *ssid     = "@@@@@@@@@@";
+    const char *password = "&&&&&&&&&&";
           WiFiMulti WiFiMulti; 
       int TryNum = 0;
 
@@ -43,7 +49,7 @@ const int   daylightOffset_sec = 3600 * 0;
           
 //____________________________________________________________________________      
 #include <OpenWeatherOneCall.h>
-#define   ONECALLKEY "75779ae0cf6ebb8e370752f4943d709d"
+#define   ONECALLKEY "############################"
 //    float myLATITUDE = 48.4769;//   ICHTRATZHEIM
     float myLATITUDE = 48.489901;//   FEGERSHEIM
 //    float myLONGITUDE = 7.67806;//  ICHTRATZHEIM
@@ -59,6 +65,7 @@ const int   daylightOffset_sec = 3600 * 0;
      bool firstCall = true;
      bool foreCast = false;
      bool meteoCall = true;
+     bool flag = false;
       int castHour, castDay; 
       int iconeTft, dayLigne, hourLigne, hourColl;
      bool collFlag;
@@ -176,6 +183,7 @@ void loop() {
      for (numero = 0; numero < nbrBoutons; numero++) {
           if (pressed && bouton[numero].contains(t_y, t_x)) {
               bouton[numero].press(true);
+              flag = true;
               Serial.print("Bouton nr: "); Serial.println(numero);
               numeroChoix = numero;
               meteoCall = true;               
@@ -197,6 +205,16 @@ void loop() {
          OWOC.parseWeather();
          meteoCall = true;
         }       
+
+     if (OWOC.alert) {
+         drawBmp("/alerte.bmp", 2, 258);
+         if (flag == true) {
+             afficheAlerte();
+             localTime();
+             flag = false;           
+            }              
+        }     
+     
      if ((numeroChoix == 0) & (meteoCall == true)) {
          Serial.println("Routine ICI");
          meteoCall = false;
