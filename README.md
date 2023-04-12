@@ -65,6 +65,11 @@ En cas d'alerte météo, indication par icone sur touche météo courante
 Et indication de la nature et durée sur un écran affiché de façon temporaire 
  
  
+ ![image](https://user-images.githubusercontent.com/126287326/231480884-47535a8e-c6a6-4b3b-a7cc-187e0425e0f2.jpeg)
+
+ ![image](https://user-images.githubusercontent.com/126287326/231481168-51f6f4d8-1b57-4e8c-86d2-96f9e0c08b8c.jpeg)
+
+ 
  
 Schéma de connection de l'afficheur  
 
